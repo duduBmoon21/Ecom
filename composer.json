@@ -40,7 +40,7 @@
             "Tests\\": "tests/", 
             "App\\": "app/",
             "App\\Helpers\\": "app/Helpers/"
-        },
+        }
     },
     "scripts": {
         "post-autoload-dump": [
