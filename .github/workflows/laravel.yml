@@ -25,9 +25,6 @@ jobs:
       run: |
         composer install --no-interaction --prefer-dist --optimize-autoloader
         npm install
-
-    - name: 🔧 Build 
-      run: npm run development
       
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
