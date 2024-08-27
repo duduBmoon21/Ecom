@@ -22,9 +22,7 @@ jobs:
         node-version: '20.5'
 
     - name: 🔨 Install dependencies
-      run: |
-        composer install --no-interaction --prefer-dist --optimize-autoloader
-        npm install
+      run:  npm install
       
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
@@ -33,7 +31,7 @@ jobs:
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     
     - name: 📥 Install Dependencies
-      run: composer install --quiet --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      run: composer install --quiet --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --prefer-dist --optimize-autoloader
     
     - name: 🔑 Generate Application Key
       run: php artisan key:generate
@@ -45,7 +43,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./  # Sync the entire project directory
-        server-dir: /path/to/your/laravel/application # Specify the correct server directory
+        server-dir: /yealemtsehayt.ducodeverse.com/public # Specify the correct server directory  
 
     - name: 🧹 Cleanup
       run: |
